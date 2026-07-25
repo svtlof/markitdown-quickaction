@@ -12,7 +12,7 @@
 ### Вариант 1 — одна команда
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/<ваш-юзернейм>/markitdown-quickaction/main/remote-install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/svtlof/markitdown-quickaction/main/remote-install.sh)
 ```
 
 ### Вариант 2 — вручную
