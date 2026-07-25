@@ -18,7 +18,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/<ваш-юзернейм>/ma
 ### Вариант 2 — вручную
 
 ```bash
-git clone https://github.com/<ваш-юзернейм>/markitdown-quickaction.git
+git clone https://github.com/svtlof/markitdown-quickaction.git
 cd markitdown-quickaction
 chmod +x install.sh
 ./install.sh
