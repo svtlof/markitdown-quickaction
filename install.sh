@@ -32,7 +32,6 @@ xattr -dr com.apple.quarantine "$DEST_DIR/$WORKFLOW_NAME" 2>/dev/null || true
 echo "→ Обновляю кеш служб Finder..."
 /System/Library/CoreServices/pbs -flush
 
-echo "→ Назначаю сочетание клавиш ⌘⌃M (Cmd+Ctrl+M)..."
 defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Convert to Markdown" "@^m"
 killall Finder 2>/dev/null || true
 killall Dock 2>/dev/null || true
@@ -41,6 +40,4 @@ echo ""
 echo "✅ Готово! Файл можно конвертировать так:"
 echo "   1) Кликнуть правой кнопкой → Quick Actions → Convert to Markdown"
 echo "   2) Или выделить файл и нажать ⌘⌃M"
-echo ""
-echo "Если сочетание клавиш не сработало сразу — выйдите и зайдите"
-echo "в аккаунт заново (Apple menu → Log Out), это надёжнее подхватывает изменение."
+
