@@ -14,7 +14,7 @@ echo -n "Your choice (e.g.: 1 2): "
 read -r mods
 
 combo=""
-for m in $mods; do
+for m in ${=mods}; do
   case $m in
     1) combo="${combo}@" ;;
     2) combo="${combo}~" ;;

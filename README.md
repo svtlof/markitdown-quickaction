@@ -31,6 +31,7 @@ The script will automatically install `markitdown` via pip, add the Quick Action
 If you want a different combination instead of ⌘⌃M:
 
 ```bash
+chmod +x install.sh
 ./configure-hotkey.sh
 ```
 
