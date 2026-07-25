@@ -1,21 +1,21 @@
 # Convert to Markdown — Finder Quick Action
 
-Добавляет пункт **«Convert to Markdown»** в контекстное меню Finder (правый клик на файле → Quick Actions). Конвертирует PDF, Word, Excel, PowerPoint, изображения и другие форматы в `.md`, используя [MarkItDown](https://github.com/microsoft/markitdown) от Microsoft.
+Adds a **"Convert to Markdown"** item to the Finder context menu (right-click on file → Quick Actions). Converts PDF, Word, Excel, PowerPoint, images and other formats to `.md` using Microsoft's [MarkItDown](https://github.com/microsoft/markitdown).
 
-## Требования
+## Requirements
 
 - macOS 12+
-- Python 3 (`brew install python`, если ещё не установлен)
+- Python 3 (install with `brew install python` if not already installed)
 
-## Установка
+## Installation
 
-### Вариант 1 — одна команда
+### Option 1 — one command
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/svtlof/markitdown-quickaction/main/remote-install.sh)
 ```
 
-### Вариант 2 — вручную
+### Option 2 — manual
 
 ```bash
 git clone https://github.com/svtlof/markitdown-quickaction.git
@@ -24,35 +24,35 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Скрипт сам установит `markitdown` через pip, добавит Quick Action в Finder и назначит сочетание клавиш **⌘⌃M (Cmd+Ctrl+M)** по умолчанию.
+The script will automatically install `markitdown` via pip, add the Quick Action to Finder, and assign the keyboard shortcut **⌘⌃M (Cmd+Ctrl+M)** by default.
 
-### Изменить сочетание клавиш (опционально)
+### Change keyboard shortcut (optional)
 
-Если хотите другую комбинацию вместо ⌘⌃M:
+If you want a different combination instead of ⌘⌃M:
 
 ```bash
 ./configure-hotkey.sh
 ```
 
-Интерактивно спросит желаемую комбинацию и переназначит её.
+It will interactively ask for the desired combination and reassign it.
 
-## Использование
+## Usage
 
-- Кликните правой кнопкой на любом поддерживаемом файле → **Quick Actions → Convert to Markdown**, либо
-- выделите файл и нажмите **⌘⌃M**
+- Right-click on any supported file → **Quick Actions → Convert to Markdown**, or
+- Select a file and press **⌘⌃M**
 
-Результат (`имя-файла.md`) появится в той же папке.
+The result (`filename.md`) will appear in the same folder.
 
-## Удаление
+## Uninstall
 
 ```bash
 ./uninstall.sh
 ```
 
-## Как это работает
+## How it works
 
-Это обёртка вокруг Automator Quick Action, которая вызывает CLI-утилиту `markitdown` для каждого выбранного файла.
+This is a wrapper around an Automator Quick Action that calls the `markitdown` CLI utility for each selected file.
 
-## Лицензия
+## License
 
 MIT
